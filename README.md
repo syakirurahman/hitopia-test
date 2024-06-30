@@ -12,7 +12,7 @@ npm install
 
 ### Run the specific file using `ts-node` command
 
-```ts
+```sh
 ts-node weighted-string.ts
 ts-node balanced-brackets.ts
 ts-node highest-palindrome.ts
@@ -22,7 +22,7 @@ The function return will be printed on Command Line Interface.
 
 ## Balanced Bracket Complexity Analysis
 
-```
+```ts
 function areBracketsBalanced(brackets: string) {
   const stack: string[] = []; // To save the opening bracket, and remove it after loop encounter matched closing bracket
   const bracketMatching: { [key:string]: string } = {
