@@ -43,21 +43,22 @@ function highestPalindrome(stringOfNumbers: string, changingChances: number) {
     return arr.join('') === [...arr].reverse().join('') 
   }
 
+  if (Number.isNaN(stringOfNumbers)) return '-1'
   let arr = stringOfNumbers.split('');
   return generateHighestPalindrome(arr, 0, arr.length - 1, changingChances);
 }
 
 // Test 1
-console.log(highestPalindrome("3943", 1));  // "3993"
+console.log(highestPalindrome("notnumber", 1));  // "-1"
 
 // Test 2
-console.log(highestPalindrome("932239", 2)); // "992299"
+console.log(highestPalindrome("3943", 1));  // "3993"
 
 // Test 3
-console.log(highestPalindrome("314923", 1));  // "-1"
+console.log(highestPalindrome("932239", 2)); // "992299"
 
 // Test 4
-console.log(highestPalindrome("324923", 1));  // "329923"
+console.log(highestPalindrome("314923", 1));  // "-1"
 
 // Test 5
 console.log(highestPalindrome("314923", 3));  // "329923"
